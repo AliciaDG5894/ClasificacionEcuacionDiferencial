@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instrucciones {
+    background: #f8f9fb;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.instrucciones ul {
+    margin-left: 20px;
+}
+
+.nota {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.formulario input {
+    width: 97%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 10px;
+    background: #4a67d6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background: #3b54b5;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef4ff;
+    border-radius: 6px;
+}
+
+.ecuacion-usada {
+    font-size: 1.1em;
+    background: #ffffff;
+    padding: 10px;
+    border-left: 4px solid #4a67d6;
+}
