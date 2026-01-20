@@ -28,7 +28,26 @@ require 'analizar.php';
         
         <form method="post" class="formulario">
             <label>Ingresa la ecuación diferencial:</label><br>
-            <input type="text" name="ecuacion" required>
+
+
+            <div class="teclado">
+                <button type="button" data-insert="dy/dx">dy/dx</button>
+                <button type="button" data-insert="y'">y'</button>
+                <button type="button" data-insert="y''">y''</button>
+                <button type="button" data-insert="y'''">y'''</button>
+                <button type="button" data-insert="^">^</button>
+                <button type="button" data-insert="(">(</button>
+                <button type="button" data-insert=")">)</button>
+                <button type="button" data-insert="+">+</button>
+                <button type="button" data-insert="-">−</button>
+                <button type="button" data-insert="=0">= 0</button>
+            </div>
+
+
+
+            <input type="text" name="ecuacion" id="ecuacion" required>
+
+            <!-- <input type="text" name="ecuacion" required> -->
             <br><br>
             <button type="submit">Clasificar</button>
         </form>
@@ -62,8 +81,26 @@ require 'analizar.php';
 
     </div>
 
-
-
-
 </body>
 </html>
+
+<script>
+document.querySelectorAll('.teclado button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const input = document.getElementById('ecuacion');
+        const texto = btn.dataset.insert;
+
+        const start = input.selectionStart;
+        const end = input.selectionEnd;
+
+        input.value =
+            input.value.substring(0, start) +
+            texto +
+            input.value.substring(end);
+
+        input.focus();
+        input.selectionStart = input.selectionEnd = start + texto.length;
+    });
+});
+</script>
+
