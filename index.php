@@ -21,9 +21,6 @@ require 'analizar.php';
                 <li>(d2y/dx2)^4 + y = 0</li>
                 <li>y'' + y = 0</li>
             </ul>
-            <p class="nota">
-                Nota: para calcular el grado, la derivada debe estar elevada a una potencia.
-            </p>
         </div>
         
         <form method="post" class="formulario">
@@ -103,4 +100,5 @@ document.querySelectorAll('.teclado button').forEach(btn => {
     });
 });
 </script>
+
 
